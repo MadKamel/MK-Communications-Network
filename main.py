@@ -12,7 +12,6 @@ client.connect(server, channel, nickname)
 while True:
   cmd = comms.parsecmd(client.get_text())
   if not cmd == None:
-    print(cmd)
     if cmd == 'test':
       print('Message recieved.')
     pass
