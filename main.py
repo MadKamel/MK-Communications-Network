@@ -1,4 +1,4 @@
-import irc, os
+import irc, os, comms
 os.system('clear')
 
 channel = "#mk-comms"
@@ -10,7 +10,10 @@ client.connect(server, channel, nickname)
 
 
 while True:
-  text = client.get_text()
-  print(text)
-
-  
+  cmd = comms.parsecmd(client.get_text())
+  if not cmd == None:
+    print(cmd)
+    if cmd == 'test':
+      print('Message recieved.')
+    pass
+    # run command

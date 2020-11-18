@@ -1,6 +1,5 @@
 # taken from https://github.com/MadKamel/Irkbot-IRC-Bot
 import socket
-import sys
 
 
 class IRC:
