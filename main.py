@@ -19,5 +19,5 @@ while True:
     elif cmd == 'pong':
       print('pong from ' + user + ' recieved.')
 
-    elif cmd[:3] == 'send':
+    elif cmd[:4] == 'send':
       print(cmd)
