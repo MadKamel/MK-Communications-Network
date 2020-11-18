@@ -18,3 +18,6 @@ while True:
     
     elif cmd == 'pong':
       print('pong from ' + user + ' recieved.')
+
+    elif cmd[:3] == 'send':
+      print(cmd)
