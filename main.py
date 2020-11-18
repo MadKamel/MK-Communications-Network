@@ -15,5 +15,6 @@ while True:
     if cmd == 'ping':
       client.send(channel, 'pong')
       print('ping from ' + user + ' ponged.')
-    pass
-    # run command
+
+    elif cmd == 'pong':
+      print('pong from ' + user + ' recieved.')
