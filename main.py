@@ -10,9 +10,10 @@ client.connect(server, channel, nickname)
 
 
 while True:
-  cmd = comms.parsecmd(client.get_text())
+  cmd, user = comms.parsecmd(client.get_text())
   if not cmd == None:
-    if cmd == 'test':
-      print('Message recieved.')
+    if cmd == 'ping':
+      client.send(channel, 'pong')
+      print('ping from ' + user + ' ponged.')
     pass
     # run command
