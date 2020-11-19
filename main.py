@@ -12,6 +12,7 @@ client.connect(server, channel, nickname)
 while True:
   cmd, user, fullmsg = comms.parsecmd(client.get_text())
   if not cmd == None:
+    print(fullmsg)
     if cmd[:4] == 'ping':
       client.send(channel, 'pong')
       print('ping from ' + user + ' ponged.')
