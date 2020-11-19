@@ -4,7 +4,7 @@ os.system('clear')
 
 channel = "#mk-comms"
 server = "irc.freenode.net"
-nickname = "mk-testing-agent"
+nickname = "mk-hosting"
 
 client = irc.IRC()
 client.connect(server, channel, nickname)
@@ -33,7 +33,7 @@ while True:
         
         if rqst_data == 'ack':
           client.send('give ' + user + ' ack')
-        elif rqst_data == 'mc-testfile':
+        elif rqst_data == 'test.dyn':
           client.send('give ' + user + ' file test.dyn ' + comms.encode_file('test.dyn'))
         else:
           client.send('fail ' + user + ' 0:RQST_NOT_RECOGNIZED')
