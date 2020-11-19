@@ -34,6 +34,6 @@ while True:
         if rqst_data == 'ack':
           client.send('give ' + user + ' ack')
         elif rqst_data == 'mc-testfile':
-          client.send('give ' + user + ' file test.dyn ' + open('test.dyn').read())
+          client.send('give ' + user + ' file test.dyn ' + comms.encode_file('test.dyn'))
         else:
           client.send('fail ' + user + ' 0:RQST_NOT_RECOGNIZED')
