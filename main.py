@@ -18,6 +18,3 @@ while True:
     
     elif cmd[:4] == 'pong':
       print('pong from ' + user + ' recieved.')
-
-    elif cmd[:4] == 'send':
-      print(comms.format_packet(cmd[4:]))
