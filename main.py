@@ -10,7 +10,7 @@ client.connect(server, channel, nickname)
 
 
 while True:
-  cmd, user = comms.parsecmd(client.get_text())
+  cmd, user, fullmsg = comms.parsecmd(client.get_text())
   if not cmd == None:
     if cmd[:4] == 'ping':
       client.send(channel, 'pong')
