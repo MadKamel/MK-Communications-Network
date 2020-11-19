@@ -4,7 +4,7 @@ os.system('clear')
 
 channel = "#mk-comms"
 server = "irc.freenode.net"
-nickname = "mk-comms-agent00"
+nickname = "mk-testing-agent"
 
 client = irc.IRC()
 client.connect(server, channel, nickname)
