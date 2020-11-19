@@ -4,7 +4,7 @@ os.system('clear')
 
 channel = "#mk-comms"
 server = "irc.freenode.net"
-nickname = "microsystems_host"
+nickname = "mcsys-host"
 
 client = irc.IRC()
 client.connect(server, channel, nickname)
@@ -33,7 +33,7 @@ while True:
         
         if rqst_data == 'ack':
           client.send('give ' + user + ' ack')
-        elif rqst_data == 'get':
+        elif rqst_data.split(' ')[0] == 'get':
           try:
             client.send('give ' + user + ' ' + fullmsg.split(' ')[3] + ' ' + comms.encode_file('public/' + fullmsg.split(' ')[1]))
           except:
