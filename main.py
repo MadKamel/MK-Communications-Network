@@ -29,15 +29,15 @@ while True:
     elif cmd == 'rqst':
       if fullmsg.split(' ')[1] == nickname:
         rqst_data = ' '.join(fullmsg.split(' ')[2:])
-        print('recieved request from ' + user + ' for ' + rqst_data + '.')
+        print('recieved request from ' + user + ' to ' + rqst_data + '.')
         
         if rqst_data == 'ack':
           client.send('give ' + user + ' ack')
         elif rqst_data.split(' ')[0] == 'get':
-          try:
-            client.send('give ' + user + ' file ' + fullmsg.split(' ')[3] + ' ' + comms.encode_file('public/' + fullmsg.split(' ')[3]))
-          except:
-            client.send('fail ' + user + ' 1:OBJECT_NOT_RECOGNIZED')
+          #try:
+          client.send('give ' + user + ' file ' + rqst_data.split(' ')[1] + ' ' + comms.encode_file('public/' + rqst_data.split(' ')[1]))
+          #except:
+          #  client.send('fail ' + user + ' 1:OBJECT_NOT_RECOGNIZED')
          
         else:
           client.send('fail ' + user + ' 0:RQST_NOT_RECOGNIZED')
