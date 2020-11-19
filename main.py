@@ -20,4 +20,6 @@ while True:
       print('pong from ' + user + ' recieved.')
 
     elif cmd == 'send':
-      pass
+      if fullmsg.split(' ')[1] == nickname:
+        print('sending message from ' + user + ' to logs.')
+        print(' '.join(fullmsg.split(' ')[2:]))
