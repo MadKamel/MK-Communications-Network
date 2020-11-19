@@ -14,7 +14,7 @@ while True:
   cmd, user, fullmsg = comms.parsecmd(client.get_text())
   if not cmd == None:
     if cmd == 'ping':
-      client.send(channel, 'pong')
+      client.send('pong')
       print('ping from ' + user + ' ponged.')
     
     elif cmd == 'pong':
