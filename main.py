@@ -1,6 +1,7 @@
 import irc, os, comms
 os.system('clear')
 
+
 channel = "#mk-comms"
 server = "irc.freenode.net"
 nickname = "mk-comms-agent00"
@@ -21,5 +22,16 @@ while True:
 
     elif cmd == 'send':
       if fullmsg.split(' ')[1] == nickname:
+        sent_command = ' '.join(fullmsg.split(' ')[2:])
         print('sending message from ' + user + ' to logs.')
-        print(' '.join(fullmsg.split(' ')[2:]))
+        print(sent_command)
+    
+    elif cmd == 'rqst':
+      if fullmsg.split(' ')[1] == nickname:
+        rqst_data = ' '.join(fullmsg.split(' ')[2:])
+        print('recieved request from ' + user + ' for ' + rqst_data + '.')
+        
+        if rqst_data == 'ack':
+          client.send('give ' + user + ' ack')
+        else:
+          client.send('fail ' + user + ' 0:RQST_NOT_RECOGNIZED')
