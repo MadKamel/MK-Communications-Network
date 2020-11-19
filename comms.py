@@ -11,7 +11,9 @@ def parsecmd(msg):
   return cmd, user, ' '.join(spl[3:])[1:].split('\r\n')[0]
 
 def encode_file(file):
-  return str(base64.b64encode(open(file).read().encode('ascii')))
+  return base64.b64encode(open(file).read().encode('ascii')).decode()
 
 def decode_file(file, data):
-  open(file, 'w').write(str(base64.b64decode(data)).decode())
+  wker = base64.b64decode(data).decode('utf-8')
+
+  return wker
