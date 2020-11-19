@@ -26,6 +26,6 @@ class IRC:
   def get_text(self):
     text = self.irc.recv(2040).decode()
     if text.find('PING') != -1:
-      self.irc.send(('PONG ' + text.split()[1] + '\r\n').encode('utf-8')) 
+      self.irc.send(('PONG ' + text.split()[1] + '\r\n').encode('utf-8'))
 
     return text
