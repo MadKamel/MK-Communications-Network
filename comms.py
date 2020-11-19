@@ -5,6 +5,10 @@ def parsecmd(msg):
   if spl[1] == 'PRIVMSG':
     user = spl[0][1:].split('!')[0]
     cmd = spl[3][1:].split('\r\n')[0]
+    try:
+      cmd = cmd + ' ' + ' '.join(spl[4:])
+    except:
+      pass
   
   return cmd, user
 
