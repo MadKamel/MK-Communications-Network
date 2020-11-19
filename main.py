@@ -35,7 +35,7 @@ while True:
           client.send('give ' + user + ' ack')
         elif rqst_data.split(' ')[0] == 'get':
           try:
-            client.send('give ' + user + ' ' + fullmsg.split(' ')[3] + ' ' + comms.encode_file('public/' + fullmsg.split(' ')[3]))
+            client.send('give ' + user + ' file ' + fullmsg.split(' ')[3] + ' ' + comms.encode_file('public/' + fullmsg.split(' ')[3]))
           except:
             client.send('fail ' + user + ' 1:OBJECT_NOT_RECOGNIZED')
          
