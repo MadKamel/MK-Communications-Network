@@ -1,5 +1,7 @@
 index of mcsys-host:
 
 public/
-  |-> index.dyn
-  |-> sitemap
+ |-> index.dyn
+ |-> sitemap
+ |-> mcsys-docs/
+ |    |-> mkcomm.dyn
