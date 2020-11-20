@@ -7,7 +7,7 @@ server = "irc.freenode.net"
 nickname = "mcsys-host"
 
 client = irc.IRC()
-client.connect(server, channel, nickname)
+client.connect(server, channel, nickname, "MK-COMMS Test Service")
 
 
 while True:
