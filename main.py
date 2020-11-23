@@ -34,10 +34,10 @@ while True:
         if rqst_data == 'ack':
           client.send('give ' + user + ' ack')
         elif rqst_data.split(' ')[0] == 'get':
-          #try:
-          client.send('give ' + user + ' file ' + rqst_data.split(' ')[1] + ' ' + comms.encode_file('public/' + rqst_data.split(' ')[1]))
-          #except:
-          #  client.send('fail ' + user + ' 1:OBJECT_NOT_RECOGNIZED')
+          try:
+            client.send('give ' + user + ' file ' + rqst_data.split(' ')[1] + ' ' + comms.encode_file('public/' + rqst_data.split(' ')[1]))
+          except:
+            client.send('fail ' + user + ' 1:OBJECT_NOT_RECOGNIZED')
          
         else:
           client.send('fail ' + user + ' 0:RQST_NOT_RECOGNIZED')
