@@ -25,6 +25,11 @@ while True:
         sent_command = ' '.join(fullmsg.split(' ')[2:])
         print('sending message from ' + user + ' to logs.')
         print(sent_command)
+
+    elif cmd == 'post':
+      sent_command = ' '.join(fullmsg.split(' ')[1:])
+      print('sending post from ' + user + ' to logs.')
+      print(sent_command)
     
     elif cmd == 'rqst':
       if fullmsg.split(' ')[1] == nickname:
