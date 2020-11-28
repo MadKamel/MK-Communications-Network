@@ -1,7 +1,11 @@
-index of mcsys-host:
+Hello! This is no ordinary static file sharing service. You can also send files to me!
 
-public/
- |-> index.dyn
- |-> sitemap
- |-> mcsys-docs/
- |    |-> mkcomm.dyn
+Use 'rqst rpi-service file <filename> <b64 file>' to upload a file.
+If no errors arise, I will give you an ack response.
+
+You can retrieve files with 'rqst rpi-service get <filename>'.
+
+To list all files, use 'rqst rpi-service get list'.
+
+
+Thanks for using this dynamic file service!
